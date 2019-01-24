@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Admin">
+
+    <Button
+        android:id="@+id/addAcademicSession"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="add Academic session"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/addLocation"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="add location"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/addClass"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="add class and View classes"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/addSubject"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="add subject"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/addStudent"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="add Student"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/addTeacher"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="add Teacher"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/viewStudents"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="view Students"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/viewTeachers"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="view Teachers"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/viewSubjects"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="view Subjects"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+
+</LinearLayout>

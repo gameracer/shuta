@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        tools:context=".StudentRegister">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/vImageProfile"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_column="1"
+                        android:src="@drawable/ic_account_circle_black_24dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/vprofilePic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="insert profile picture" />
+
+                        <Button
+                            android:id="@+id/vImageUpload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="UPLOAD PICTURE" />
+
+                        <Button
+                            android:id="@+id/vRemoveImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="REMOVE PICTURE" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="129dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="FIRST NAME:" />
+
+                    <EditText
+                        android:id="@+id/fname"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:inputType="text" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="MIDDLE NAME:" />
+
+                    <EditText
+                        android:id="@+id/mname"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:inputType="text" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="LAST NAME:" />
+
+                    <EditText
+                        android:id="@+id/lname"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:inputType="text" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="SEX" />/>
+
+                    <RadioGroup
+                        android:id="@+id/sex"
+                        android:layout_width="220dp"
+                        android:layout_column="2">
+
+                        <RadioButton
+                            android:id="@+id/female"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="female" />
+
+
+                        <RadioButton
+                            android:id="@+id/male"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="male" />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="DATE OF BIRTH" />
+
+                    <EditText
+                        android:id="@+id/vDoB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:ems="10"
+                        android:inputType="date" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="PARENT NAME" />
+
+                    <EditText
+                        android:id="@+id/vParentName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:ems="10"
+                        android:inputType="text" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="PARENT OCCUPATION" />
+
+                    <EditText
+                        android:id="@+id/vParentOccupation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:ems="10"
+                        android:inputType="text" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="PARENT PhoneNo:" />
+
+                    <EditText
+                        android:id="@+id/vParentPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:ems="10"
+                        android:inputType="phone" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:padding="10dp"
+                        android:text="STANDARD:" />
+
+                    <Spinner
+                        android:id="@+id/spinner1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_column="2"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_span="2"
+                        android:text="save" />
+                </TableRow>
+
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+

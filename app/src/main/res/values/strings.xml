@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">shuta</string>
+    <string name="action_settings">Settings</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_admin_veiw">admin_veiw</string>
+    <string name="tab_text_1">STUDENT</string>
+    <string name="tab_text_2">STAFF</string>
+    <string name="tab_text_3">SUBJECT</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+</resources>

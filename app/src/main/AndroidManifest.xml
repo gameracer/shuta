@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gameracer.mussa.shuta">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ClassRegister"></activity>
+        <activity android:name=".ViewLocations" />
+        <activity android:name=".LocationRegister" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Admin" />
+        <activity android:name=".StudentRegister" />
+        <activity android:name=".SubjectRegister" />
+        <activity android:name=".TeacherRegister" />
+        <activity android:name=".AcademicRegister" />
+        <activity android:name=".ViewTeachers" />
+        <activity android:name=".ViewSubjects" />
+        <activity android:name=".ViewStudents" />
+        <activity android:name=".users_management" />
+        <activity android:name=".register_student" />
+        <activity android:name=".register_staff" />
+
+        <provider
+            android:name=".provider.ShutaProvider"
+            android:authorities="com.gameracer.mussa.shuta.provider.ShutaProvider"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

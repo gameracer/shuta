@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".users_management">
+
+    <!--<TextView-->
+
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="id"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--tools:layout_editor_absoluteX="31dp"-->
+    <!--tools:layout_editor_absoluteY="6dp" />-->
+
+    <!--<TextView-->
+
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="name"-->
+    <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+    <!--tools:layout_editor_absoluteX="76dp"-->
+    <!--tools:layout_editor_absoluteY="6dp" />-->
+
+    <!--<TextView-->
+
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Role"-->
+    <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+    <!--tools:layout_editor_absoluteX="162dp"-->
+    <!--tools:layout_editor_absoluteY="6dp" />-->
+
+    <ListView
+    android:id="@+id/list"
+    android:layout_width="304dp"
+    android:layout_height="290dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.258" />
+
+
+    <!--<GridView-->
+        <!--android:id="@+id/gridview"-->
+        <!--android:layout_width="304dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:columnWidth="90dp"-->
+        <!--android:gravity="center"-->
+        <!--android:horizontalSpacing="10dp"-->
+        <!--android:numColumns="auto_fit"-->
+        <!--android:stretchMode="columnWidth"-->
+        <!--android:verticalSpacing="10dp"-->
+        <!--tools:layout_editor_absoluteX="8dp"-->
+        <!--tools:layout_editor_absoluteY="8dp">-->
+
+    <!--</GridView>-->
+
+</android.support.constraint.ConstraintLayout>
