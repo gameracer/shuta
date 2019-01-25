@@ -1,5 +1,6 @@
 package com.gameracer.mussa.shuta;
 
+import android.content.ContentValues;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 
 import com.gameracer.mussa.shuta.provider.Academic;
 import com.gameracer.mussa.shuta.provider.DBHelper;
+import com.gameracer.mussa.shuta.provider.ShutaProvider;
 
 public class AcademicRegister extends AppCompatActivity {
     EditText name,year;
@@ -48,6 +50,15 @@ public class AcademicRegister extends AppCompatActivity {
         }
         Academic academic= new Academic(id,yr,nm);
         DBHelper shuta= new DBHelper(getApplicationContext());
-        shuta.addAcademic(academic);
+        addAcademic(academic);
+    }
+    public void addAcademic(Academic academic) {
+
+        ContentValues values = new ContentValues();
+        values.put(ShutaProvider.ACADEMIC_COLUMN_CODE, academic.getAcademicID());
+        values.put(ShutaProvider.ACADEMIC_COLUMN_NAME, academic.getName());
+        values.put(ShutaProvider.ACADEMIC_COLUMN_YEAR, academic.getYear());
+
+        getContentResolver().insert(ShutaProvider.SUBJECT_URI, values);
     }
 }

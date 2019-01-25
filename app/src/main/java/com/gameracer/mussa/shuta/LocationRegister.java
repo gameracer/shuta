@@ -1,5 +1,6 @@
 package com.gameracer.mussa.shuta;
 
+import android.content.ContentValues;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 
 import com.gameracer.mussa.shuta.provider.DBHelper;
 import com.gameracer.mussa.shuta.provider.Location;
+import com.gameracer.mussa.shuta.provider.ShutaProvider;
 
 import java.util.Random;
 
@@ -36,6 +38,7 @@ public class LocationRegister extends AppCompatActivity {
 
     }
 
+
     public void saveLocationAction(EditText region,EditText ward,EditText District){
         Random number=new Random();
         int id = number.nextInt(5000)+2018;
@@ -59,8 +62,16 @@ public class LocationRegister extends AppCompatActivity {
 
             Location location = new Location(id, rg, dsc, wrd);
             DBHelper shuta = new DBHelper(getApplicationContext());
-            shuta.addLocation(location);
+            addLocation(location);
         }
 
+    }
+    public void addLocation(Location location) {
+        ContentValues values = new ContentValues();
+        values.put(ShutaProvider.LOCATION_COLUMN_ID,location.getID());
+        values.put(ShutaProvider.LOCATION_COLUMN_REGION, location.getRegion());
+        values.put(ShutaProvider.LOCATION_COLUMN_DISTRICT, location.getDistrict());
+        values.put(ShutaProvider.LOCATION_COLUMN_WORD, location.getWord());
+        getContentResolver().insert(ShutaProvider.SUBJECT_URI, values);
     }
 }

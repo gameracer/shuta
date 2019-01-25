@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.gameracer.mussa.shuta.provider.DBHelper;
+import com.gameracer.mussa.shuta.provider.ShutaProvider;
 import com.gameracer.mussa.shuta.provider.Subject;
 
 public class SubjectRegister extends AppCompatActivity {
@@ -52,8 +53,16 @@ public class SubjectRegister extends AppCompatActivity {
 
             Subject subject=new Subject(subCode,subName);
             DBHelper shuta=new DBHelper(this);
-            shuta.addSubject(subject);
+            addSubject(subject);
             Toast.makeText(SubjectRegister.this,subCode+" "+subName,Toast.LENGTH_LONG).show();
         }
+    }
+    public void addSubject(Subject subject) {
+
+        ContentValues values = new ContentValues();
+        values.put(ShutaProvider.SUBJECT_COLUMN_CODE, subject.getSubjectCode());
+        values.put(ShutaProvider.SUBJECT_COLUMN_NAME, subject.getSubjectName());
+
+        getContentResolver().insert(ShutaProvider.SUBJECT_URI, values);
     }
 }

@@ -1,12 +1,12 @@
 package com.gameracer.mussa.shuta.provider;
 
-public class Class {
+public class Classs {
     String name;
 
-    public Class() {
+    public Classs() {
     }
 
-    public Class(String name) {
+    public Classs(String name) {
         this.name = name;
     }
 

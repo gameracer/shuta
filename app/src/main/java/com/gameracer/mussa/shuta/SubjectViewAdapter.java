@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 
-import com.gameracer.mussa.shuta.provider.DBHelper;
-
 public class SubjectViewAdapter extends CursorAdapter {
     private LayoutInflater cursorInflater;
     public SubjectViewAdapter(Context context, Cursor c, int flags) {
@@ -20,7 +18,7 @@ public class SubjectViewAdapter extends CursorAdapter {
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        return cursorInflater.inflate(R.layout.list_subject, parent, false);
+        return cursorInflater.inflate(R.layout.list_subject_row, parent, false);
     }
 
     @Override

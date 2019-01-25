@@ -1,93 +1,19 @@
 package com.gameracer.mussa.shuta.provider;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
-
-import static android.provider.Contacts.SettingsColumns.KEY;
-import static java.sql.Types.NULL;
-import static java.sql.Types.VARCHAR;
-import static java.text.Collator.PRIMARY;
 
 public class DBHelper extends SQLiteOpenHelper {
     //database name
     public static final String DATABASE_NAME = "shuta.db";
 
 //    //tablename and colum
-//table 1
-public static final String TEACHER_TABLE_NAME = "table_teacher";
-    public static final String TEACHER_COLUMN_ID = "_id";
-    public static final String TEACHER_COLUMN_FNAME = "teacher_fname";
-    public static final String TEACHER_COLUMN_MNAME = "teacher_mname";
-    public static final String TEACHER_COLUMN_LNAME = "teacher_lname";
-    public static final String TEACHER_COLUMN_PASSWORD = "teacher_password";
-    public static final String TEACHER_COLUMN_GENDER = "teacher_gender";
-    public static final String TEACHER_COLUMN_PHONENO = "teacher_phone";
-    public static final String TEACHER_COLUMN_LOCATION = "teacher_location";
-    public static final String TEACHER_COLUMN_EMAIL="teacher_Email";
-
-
-    //
-//    //table 2 :pg=parent or garadian
-    public static final String STUDENT_TABLE_NAME = "table_student";
-    public static final String STUDENT_COLUMN_ID = "_id";
-    public static final String STUDENT_COLUMN_FNAME = "student_fname";
-    public static final String STUDENT_COLUMN_MNAME = "student_mname";
-    public static final String STUDENT_COLUMN_LNAME = "student_lname";
-    public static final String STUDENT_COLUMN_PASSWORD = "student_password";
-    public static final String STUDENT_COLUMN_GENDER = "student_gender";
-    public static final String STUDENT_COLUMN_DATEREGISTERED = "student_dateRegister";
-    public static final String STUDENT_COLUMN_PGNAME = "student_pgName";
-    public static final String STUDENT_COLUMN_PGPHONE = "student_pgPhone";
-    public static final String STUDENT_COLUMN_PGPOBOX = "student_pgPOBox";
-    public static final String STUDENT_COLUMN_CLASS = "class_code";
-    public static final String STUDENT_COLUMN_LOCATION = "location";
-
-
-
-    public static final String LOCATION_TABLE_NAME = "table_location";
-    public static final String LOCATION_COLUMN_ID ="_id";
-    public static final String LOCATION_COLUMN_COUNTRY = "location_country";
-    public static final String LOCATION_COLUMN_WORD = "location_word";
-    public static final String LOCATION_COLUMN_REGION= "location_region";
-    public static final String LOCATION_COLUMN_DISTRICT="location_district";
-
-
-    public static final String CLASS_TABLE_NAME = "table_class";
-    public static final String CLASS_COLUMN_CODE ="_id";
-    public static final String CLASS_COLUMN_NAME ="class_name";
-    public static final String CLASS_COLUMN_TEACHER ="class_teacher";
-
-    public static final String ACADEMICSESION_TABLE_NAME = "table_AcademicSession";
-    public static final String ACADEMIC_COLUMN_CODE ="_id";
-    public static final String ACADEMIC_COLUMN_NAME ="academic_name";
-    public static final String ACADEMIC_COLUMN_YEAR ="academic_year";
-
-
-    public static final String SUBJECT_TABLE_NAME = "table_subject";
-    public static final String SUBJECT_COLUMN_CODE ="_id";
-    public static final String SUBJECT_COLUMN_NAME ="subject_name";
-    public static final String SUBJECT_COLUMN_TEACHER ="subject_teacher";
-
-
-
-    public static final String EXAMRESULT_TABLE_NAME = "table_ExamResult";
-    public static final String EXAMRESULT_COLUMN_MARK ="exam_mark";
-    public static final String EXAMRESULT_COLUMN_SUBJECT ="exam_subject";
-    public static final String EXAMRESULT_COLUMN_STUDENT ="exam_student";
-    public static final String EXAMRESULT_COLUMN_ACADEMIC ="exam_academic";
-
-
-    public static final String  SUBJECTHASTEACHER_TABLE_NAME = "table_subject_has_table_teacher";
-    public static final String  SUBJECTHASTEACHER_COLUMN_SUBJECT = "table_subject_subject_code";
-    public static final String  SUBJECTHASTEACHER_COLUMN_TEACHER = "table_teacher_teacher_id";
 
 
     private HashMap hp;
@@ -104,7 +30,7 @@ public static final String TEACHER_TABLE_NAME = "table_teacher";
 
         //create table location
         db.execSQL("CREATE TABLE table_location (\n" +
-                "  _id INT PRIMARY KEY AUTOINCREMENT,\n" +
+                "  _id INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
                 "  location_word VARCHAR(45) ,\n" +
                 "  location_region VARCHAR(45) ,\n" +
                 "  location_discrict VARCHAR(45) )");
@@ -198,82 +124,7 @@ public static final String TEACHER_TABLE_NAME = "table_teacher";
 //        db.execSQL("DROP TABLE IF EXISTS table_subject");
                 onCreate(db);
     }
-    public void addSubject(Subject subject) {
 
-        ContentValues values = new ContentValues();
-        values.put(SUBJECT_COLUMN_CODE, subject.getSubjectCode());
-        values.put(SUBJECT_COLUMN_NAME, subject.getSubjectName());
-
-        myCR.insert(ShutaProvider.SUBJECT_URI, values);
-    }
-    public Subject findProduct(String subjectname) {
-        String[] projection = {SUBJECT_COLUMN_CODE,
-                SUBJECT_COLUMN_NAME};
-
-        String selection = "subjectname = \"" + subjectname + "\"";
-
-        Cursor cursor = myCR.query(ShutaProvider.SUBJECT_URI,
-                projection, selection, null,
-                null);
-
-        Subject subject = new Subject();
-
-        if (cursor.moveToFirst()) {
-            cursor.moveToFirst();
-            subject.setSubjectCode(cursor.getString(0));
-            subject.setSubjectName(cursor.getString(1));
-            cursor.close();
-        } else {
-            subject = null;
-        }
-        return subject;
-    }
-    public Cursor getAllSubject(){
-        String[] projection = {SUBJECT_COLUMN_CODE,
-                SUBJECT_COLUMN_NAME};
-        Cursor mcursor=myCR.query(ShutaProvider.SUBJECT_URI,projection,null,null,null);
-        return mcursor;
-    }
-    public void addLocation(Location location) {
-
-        ContentValues values = new ContentValues();
-        values.put(LOCATION_COLUMN_ID,location.getID());
-        values.put(LOCATION_COLUMN_REGION, location.getRegion());
-        values.put(LOCATION_COLUMN_DISTRICT, location.getDistrict());
-        values.put(LOCATION_COLUMN_WORD, location.getWord());
-
-
-        myCR.insert(ShutaProvider.SUBJECT_URI, values);
-    }
-    public void addTeacher(Teacher teacher) {
-
-        ContentValues values = new ContentValues();
-        values.put(TEACHER_COLUMN_ID, teacher.getId() );
-        values.put(TEACHER_COLUMN_FNAME,teacher.getFname() );
-        values.put(TEACHER_COLUMN_MNAME,teacher.getMname() );
-        values.put(TEACHER_COLUMN_LNAME,teacher.getLname() );
-        values.put(TEACHER_COLUMN_PASSWORD, teacher.getPassword());
-        values.put(TEACHER_COLUMN_GENDER, teacher.getGender());
-        values.put(TEACHER_COLUMN_EMAIL,teacher.getEmail() );
-        values.put(TEACHER_COLUMN_PHONENO, teacher.getPhoneNo());
-        values.put(TEACHER_COLUMN_LOCATION, teacher.getLocationID() );
-        myCR.insert(ShutaProvider.SUBJECT_URI, values);
-    }
-    public void addAcademic(Academic academic) {
-
-        ContentValues values = new ContentValues();
-        values.put(ACADEMIC_COLUMN_CODE, academic.getAcademicID());
-        values.put(ACADEMIC_COLUMN_NAME, academic.getName());
-        values.put(ACADEMIC_COLUMN_YEAR, academic.getYear());
-
-        myCR.insert(ShutaProvider.SUBJECT_URI, values);
-    }
-    public void addClass(Class mclass) {
-
-        ContentValues values = new ContentValues();
-        values.put(ACADEMIC_COLUMN_NAME, mclass.getName());
-        myCR.insert(ShutaProvider.SUBJECT_URI, values);
-    }
 //    public boolean insertUsers (String name, String role) {
 //        SQLiteDatabase db = this.getWritableDatabase();
 //        ContentValues contentValues = new ContentValues();
