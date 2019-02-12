@@ -20,10 +20,10 @@ public class ShutaProvider extends ContentProvider {
      //table names
     private static final String TABLE_SUBJECT= "table_subject";
     private static final String TABLE_TEACHER= "table_teacher";
-    private static final String TABLE_STUDENT= "table_location";
+    private static final String TABLE_STUDENT= "table_student";
     private static final String TABLE_LOCATION= "table_location";
     private static final String TABLE_CLASS= "table_class";
-    private static final String TABLE_ACADEMIC= "table_academic";
+    private static final String TABLE_ACADEMIC= "table_AcademicSession";
 
     //table 1
     public static final String TEACHER_TABLE_NAME = "table_teacher";
@@ -118,7 +118,7 @@ public class ShutaProvider extends ContentProvider {
         sURIMatcher.addURI(AUTHORITY, TABLE_TEACHER + "/#",TEACHER_ID);
         sURIMatcher.addURI(AUTHORITY, TABLE_STUDENT, STUDENT );
         sURIMatcher.addURI(AUTHORITY, TABLE_STUDENT + "/#",STUDENT_ID);
-        sURIMatcher.addURI(AUTHORITY, TABLE_TEACHER, LOCATION );
+        sURIMatcher.addURI(AUTHORITY, TABLE_LOCATION, LOCATION );
         sURIMatcher.addURI(AUTHORITY, TABLE_LOCATION + "/#",LOCATION_ID);
         sURIMatcher.addURI(AUTHORITY, TABLE_ACADEMIC, ACADEMIC );
         sURIMatcher.addURI(AUTHORITY, TABLE_ACADEMIC + "/#",ACADEMIC_ID);
@@ -168,7 +168,7 @@ public class ShutaProvider extends ContentProvider {
                 default:
                     throw new IllegalArgumentException("Unknown URI");
             }
-            Cursor cursor=db.query(uri.getLastPathSegment(),projection, selection, selectionArgs, null, null, sortOrder);
+            Cursor cursor=db.query(true, uri.getLastPathSegment(),projection, selection, selectionArgs, null,null, null, sortOrder);
 
 //            Cursor cursor = queryBuilderSubject.query(myshuta.getReadableDatabase(),
 //                    projection, selection, selectionArgs, null, null, sortOrder);

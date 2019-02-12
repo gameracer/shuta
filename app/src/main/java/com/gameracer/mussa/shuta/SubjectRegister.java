@@ -52,7 +52,7 @@ public class SubjectRegister extends AppCompatActivity {
         else {
 
             Subject subject=new Subject(subCode,subName);
-            DBHelper shuta=new DBHelper(this);
+//            DBHelper shuta=new DBHelper(this);
             addSubject(subject);
             Toast.makeText(SubjectRegister.this,subCode+" "+subName,Toast.LENGTH_LONG).show();
         }

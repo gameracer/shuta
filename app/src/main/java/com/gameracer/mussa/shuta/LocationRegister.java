@@ -72,6 +72,6 @@ public class LocationRegister extends AppCompatActivity {
         values.put(ShutaProvider.LOCATION_COLUMN_REGION, location.getRegion());
         values.put(ShutaProvider.LOCATION_COLUMN_DISTRICT, location.getDistrict());
         values.put(ShutaProvider.LOCATION_COLUMN_WORD, location.getWord());
-        getContentResolver().insert(ShutaProvider.SUBJECT_URI, values);
+        getContentResolver().insert(ShutaProvider.LOCATION_URI, values);
     }
 }

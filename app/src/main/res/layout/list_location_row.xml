@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="4"
+    android:layout_marginTop="5dp">
+
+    <TextView
+        android:id="@+id/rowLocationId"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="locationID"
+        android:padding="3dp"/>
+    <TextView
+        android:id="@+id/rowRegion"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="region"
+        android:padding="3dp"/>
+    <TextView
+        android:id="@+id/rowDistrict"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="district"
+        android:padding="3dp"/>
+    <TextView
+        android:id="@+id/rowWard"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="ward"
+        android:padding="3dp"/>
 
 </LinearLayout>

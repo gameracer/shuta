@@ -9,7 +9,7 @@ import android.widget.Button;
 public class Admin extends AppCompatActivity {
 
     private Button addAcademicSession,addLocation,addClass, addStudent, addTeacher, addSubject, viewStudents,
-            viewTeachers, viewSubjects;
+            viewTeachers, viewSubjects,viewLocations,viewAcademics, viewClases;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,9 @@ public class Admin extends AppCompatActivity {
     viewStudents=(Button)findViewById(R.id.viewStudents);
     viewSubjects=(Button)findViewById(R.id.viewSubjects);
     viewTeachers=(Button)findViewById(R.id.viewTeachers);
+    viewLocations=(Button)findViewById(R.id.viewLocations);
+    viewAcademics=(Button)findViewById(R.id.viewAcademics);
+    viewClases=(Button)findViewById(R.id.viewClasses);
 
         addAcademicSession.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +92,27 @@ public class Admin extends AppCompatActivity {
             public void onClick(View v) {
                 Intent viewSubjects= new Intent(Admin.this, ViewSubjects.class);
                 startActivity(viewSubjects);
+            }
+        });
+        viewLocations.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent viewLocations= new Intent(Admin.this, ViewLocations.class);
+                startActivity(viewLocations);
+            }
+        });
+        viewAcademics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent viewAcademics= new Intent(Admin.this, ViewAcademics.class);
+                startActivity(viewAcademics);
+            }
+        });
+        viewClases.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent viewClasses= new Intent(Admin.this, ViewClasses.class);
+                startActivity(viewClasses);
             }
         });
 

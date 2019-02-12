@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ViewLocations">
+    tools:context=".ViewAcademics">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -18,7 +18,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="locationID"
+            android:text="academicCode"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
             android:padding="3dp"/>
@@ -26,16 +26,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="region"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimaryDark"
-            android:padding="3dp"/>
-        <TextView
-            android:id="@+id/rowDistrict"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="district"
+            android:text="academicName"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
             android:padding="3dp"/>
@@ -43,18 +34,15 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="ward"
+            android:text="AcademicYear"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
             android:padding="3dp"/>
 
     </LinearLayout>
-
     <ListView
-        android:id="@+id/locationListView"
+        android:id="@+id/academicListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-
-
 
 </LinearLayout>

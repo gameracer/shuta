@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ClassRegister"></activity>
+        <activity android:name=".ViewClasses"></activity>
+        <activity android:name=".ViewAcademics" />
+        <activity android:name=".ClassRegister" />
         <activity android:name=".ViewLocations" />
         <activity android:name=".LocationRegister" />
         <activity
@@ -31,7 +33,6 @@
         <activity android:name=".ViewSubjects" />
         <activity android:name=".ViewStudents" />
         <activity android:name=".users_management" />
-        <activity android:name=".register_student" />
         <activity android:name=".register_staff" />
 
         <provider

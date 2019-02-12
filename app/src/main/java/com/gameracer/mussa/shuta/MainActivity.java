@@ -13,7 +13,7 @@ import com.gameracer.mussa.shuta.provider.DBHelper;
 //import android.database.sqlite;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG ="" ;
+//    private static final String TAG ="" ;
     public EditText username;
     public EditText password;
     public Button login,register;
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         username=findViewById(R.id.username);
         password=findViewById(R.id.password);
         login=findViewById(R.id.login);
-        register=findViewById(R.id.register);
+//        register=findViewById(R.id.register);
 
         login.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -65,13 +65,13 @@ public class MainActivity extends AppCompatActivity {
                 loginAction(username.getText().toString(),password.getText().toString());
             }
         });
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, register_student.class);
-                startActivity(i);
-            }
-        });
+//        register.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(MainActivity.this, register_student.class);
+//                startActivity(i);
+//            }
+//        });
 
        
     }

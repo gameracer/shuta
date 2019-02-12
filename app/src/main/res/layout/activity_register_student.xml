@@ -1,267 +1,345 @@
-<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StudentRegister"
+    android:padding="2dp">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+
+    //student info
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="40dp"
-        tools:context=".StudentRegister">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="enter student infomation here" />
 
-        <ScrollView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="first name:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/studentFname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="enter first name" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="middle name:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/studentMname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="enter middle  name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="last name:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/studentLname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="enter last  name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Date of birth:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/dateOfBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint=" set date"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Gender/sex:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="middle  name"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/studentMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="male"
+                    android:onClick="onRadioButtonClicked"/>
+
+                <RadioButton
+                    android:id="@+id/studentFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="female"
+                    android:onClick="onRadioButtonClicked"/>
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Password:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/studentPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="enter default password" />
+        </LinearLayout>
+        <EditText
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:hint="student location info"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Region:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+            <Spinner
+                android:id="@+id/spinnerRegion"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:spinnerMode="dropdown"
+                />
 
-                    <ImageView
-                        android:id="@+id/vImageProfile"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_column="1"
-                        android:src="@drawable/ic_account_circle_black_24dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_column="2"
-                        android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="District:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/vprofilePic"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="insert profile picture" />
+            <Spinner
+                android:id="@+id/spinnerDistrict"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="enter district" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-                        <Button
-                            android:id="@+id/vImageUpload"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="UPLOAD PICTURE" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ward/street:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
 
-                        <Button
-                            android:id="@+id/vRemoveImage"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="REMOVE PICTURE" />
-
-                    </LinearLayout>
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="129dp"
-                        android:layout_height="wrap_content"
-                        android:layout_column="1"
-                        android:padding="10dp"
-                        android:text="FIRST NAME:" />
-
-                    <EditText
-                        android:id="@+id/fname"
-                        android:layout_width="220dp"
-                        android:layout_height="wrap_content"
-                        android:layout_column="2"
-                        android:inputType="text" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="1"
-                        android:padding="10dp"
-                        android:text="MIDDLE NAME:" />
-
-                    <EditText
-                        android:id="@+id/mname"
-                        android:layout_width="220dp"
-                        android:layout_height="wrap_content"
-                        android:layout_column="2"
-                        android:inputType="text" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="1"
-                        android:padding="10dp"
-                        android:text="LAST NAME:" />
-
-                    <EditText
-                        android:id="@+id/lname"
-                        android:layout_width="220dp"
-                        android:layout_height="wrap_content"
-                        android:layout_column="2"
-                        android:inputType="text" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="1"
-                        android:padding="10dp"
-                        android:text="SEX" />/>
-
-                    <RadioGroup
-                        android:id="@+id/sex"
-                        android:layout_width="220dp"
-                        android:layout_column="2">
-
-                        <RadioButton
-                            android:id="@+id/female"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="female" />
+            <Spinner
+                android:id="@+id/spinnerWard"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="enter ward" />
+        </LinearLayout>
 
 
-                        <RadioButton
-                            android:id="@+id/male"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="male" />
-
-                    </RadioGroup>
-
-                </TableRow>
-
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="1"
-                        android:padding="10dp"
-                        android:text="DATE OF BIRTH" />
-
-                    <EditText
-                        android:id="@+id/vDoB"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="2"
-                        android:ems="10"
-                        android:inputType="date" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="1"
-                        android:padding="10dp"
-                        android:text="PARENT NAME" />
-
-                    <EditText
-                        android:id="@+id/vParentName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="2"
-                        android:ems="10"
-                        android:inputType="text" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="1"
-                        android:padding="10dp"
-                        android:text="PARENT OCCUPATION" />
-
-                    <EditText
-                        android:id="@+id/vParentOccupation"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="2"
-                        android:ems="10"
-                        android:inputType="text" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="1"
-                        android:padding="10dp"
-                        android:text="PARENT PhoneNo:" />
-
-                    <EditText
-                        android:id="@+id/vParentPhone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="2"
-                        android:ems="10"
-                        android:inputType="phone" />
-                </TableRow>
-
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="1"
-                        android:padding="10dp"
-                        android:text="STANDARD:" />
-
-                    <Spinner
-                        android:id="@+id/spinner1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_column="2"
-                        android:background="@android:drawable/btn_dropdown"
-                        android:spinnerMode="dropdown"/>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-
-                    <Button
-                        android:id="@+id/save"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="1"
-                        android:layout_span="2"
-                        android:text="save" />
-                </TableRow>
-
-            </TableLayout>
-        </ScrollView>
     </LinearLayout>
 
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Parent or gardian info"
+        android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Parent/Gardian name:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/studentPGname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="enter parent/gardian  name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="phoneNo:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/studentPGphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="enter last  phone number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="address:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/studentPGaddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="enter address for parent/gardian" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/saveStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="save"
+                android:layout_weight="2"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>

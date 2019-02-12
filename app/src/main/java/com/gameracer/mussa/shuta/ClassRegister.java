@@ -22,7 +22,6 @@ import com.gameracer.mussa.shuta.provider.ShutaProvider;
 
 public class ClassRegister extends AppCompatActivity {
     EditText className;
-    ListView classListView;
     Button saveClass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,19 +29,13 @@ public class ClassRegister extends AppCompatActivity {
         setContentView(R.layout.activity_register_class);
 
         intiView();
-        DBHelper shuta=new DBHelper(getApplicationContext());
-        SQLiteDatabase db=shuta.getReadableDatabase();
-        String[] mprojection={ShutaProvider.CLASS_COLUMN_CODE,ShutaProvider.CLASS_COLUMN_NAME};
-        int[] to={R.id.rowclassid,R.id.rowclassname};
-//        Cursor cursor=getContentResolver().query(ShutaProvider.CLASS_URI,mprojection,null,null,null);
-        SimpleCursorAdapter simpleCursorAdapter=new SimpleCursorAdapter(this,R.layout.list_class_row,getAllClass(),mprojection,to,0);
-//       +
-        classListView.setAdapter(simpleCursorAdapter);
+//        DBHelper shuta=new DBHelper(getApplicationContext());
+//        SQLiteDatabase db=shuta.getReadableDatabase();
+
     }
     public void intiView(){
         className=(EditText)findViewById(R.id.className);
         saveClass=(Button)findViewById(R.id.saveClass);
-        classListView=(ListView)findViewById(R.id.classListView);
 
         saveClass.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,14 +47,9 @@ public class ClassRegister extends AppCompatActivity {
     public void saveClassAction(EditText className){
         String clsnm=className.getText().toString();
         Classs mclass=new Classs(clsnm);
-        DBHelper shuta=new DBHelper(getApplicationContext());
         addClass(mclass);
     }
-    public Cursor getAllClass(){
-        String[] projection = {ShutaProvider.CLASS_COLUMN_CODE, ShutaProvider.CLASS_COLUMN_NAME};
-        Cursor mcursor=getContentResolver().query(ShutaProvider.CLASS_URI,projection,null,null,null);
-        return mcursor;
-    }
+
     public void addClass(Classs mclass) {
 
         ContentValues values = new ContentValues();

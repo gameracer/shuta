@@ -59,6 +59,6 @@ public class AcademicRegister extends AppCompatActivity {
         values.put(ShutaProvider.ACADEMIC_COLUMN_NAME, academic.getName());
         values.put(ShutaProvider.ACADEMIC_COLUMN_YEAR, academic.getYear());
 
-        getContentResolver().insert(ShutaProvider.SUBJECT_URI, values);
+        getContentResolver().insert(ShutaProvider.ACADEMIC_URI, values);
     }
 }

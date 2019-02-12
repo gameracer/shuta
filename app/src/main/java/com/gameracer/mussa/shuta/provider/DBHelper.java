@@ -30,10 +30,10 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //create table location
         db.execSQL("CREATE TABLE table_location (\n" +
-                "  _id INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+                "  _id INTEGER PRIMARY KEY,\n" +
                 "  location_word VARCHAR(45) ,\n" +
                 "  location_region VARCHAR(45) ,\n" +
-                "  location_discrict VARCHAR(45) )");
+                "  location_district VARCHAR(45) )");
 
         //create table teacher
         db.execSQL("CREATE TABLE  table_teacher (\n" +

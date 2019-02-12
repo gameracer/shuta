@@ -36,27 +36,4 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="add" />
-
-
-    <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="400dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <ListView
-            android:id="@+id/classListView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:padding="5dp"
-            android:text="class name:" />
-
-
-    </LinearLayout>
-
-
-
 </LinearLayout>

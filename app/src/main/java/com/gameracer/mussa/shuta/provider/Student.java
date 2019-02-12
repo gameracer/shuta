@@ -1,14 +1,16 @@
 package com.gameracer.mussa.shuta.provider;
 
+import android.support.annotation.Nullable;
+
 public class Student {
-    int ID;
-    String fname, mname,lname,password, gender, pgname,pgPhoneNo,pgAddress,stClass,location;
+    String ID;
+    String fname, mname,lname,password, gender, pgname,pgPhoneNo,pgPoBox,stClass,location;
     int location_id;
 
-    public Student() {
+    public Student(String studentID, String fnm, String mnm, String lnm, String pwd, String gender, String pgnm, String pgPhNo, String pgPBox, String stClass, String location, int o) {
     }
 
-    public Student(int ID, String fname, String mname, String lname, String password, String gender, String pgname, String pgPhoneNo, String pgAddress, String stClass, String location, int location_id) {
+    public Student(String ID, String fname, String mname, String lname, String password, String gender, String pgname, String pgPhoneNo, String pgPoBox, @Nullable String stClass, @Nullable String location) {
         this.ID = ID;
         this.fname = fname;
         this.mname = mname;
@@ -17,17 +19,25 @@ public class Student {
         this.gender = gender;
         this.pgname = pgname;
         this.pgPhoneNo = pgPhoneNo;
-        this.pgAddress = pgAddress;
+        this.pgPoBox = pgPoBox;
         this.stClass = stClass;
         this.location = location;
-        this.location_id = location_id;
+//        this.location_id = location_id;
     }
 
-    public int getID() {
+    public String getPgPoBox() {
+        return pgPoBox;
+    }
+
+    public void setPgPoBox(String pgPoBox) {
+        this.pgPoBox = pgPoBox;
+    }
+
+    public String getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(String ID) {
         this.ID = ID;
     }
 
@@ -87,13 +97,6 @@ public class Student {
         this.pgPhoneNo = pgPhoneNo;
     }
 
-    public String getPgAddress() {
-        return pgAddress;
-    }
-
-    public void setPgAddress(String pgAddress) {
-        this.pgAddress = pgAddress;
-    }
 
     public String getStClass() {
         return stClass;

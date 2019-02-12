@@ -24,7 +24,7 @@
         android:id="@+id/addClass"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="add class and View classes"
+        android:text="add class "
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
     <Button
@@ -49,27 +49,73 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
 
-    <Button
-        android:id="@+id/viewStudents"
-        android:layout_width="300dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="view Students"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
-    <Button
-        android:id="@+id/viewTeachers"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="view Teachers"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
-    <Button
-        android:id="@+id/viewSubjects"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="view Subjects"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
+        android:orientation="vertical"
+        android:layout_gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="5dp">
 
+        <Button
+            android:id="@+id/viewStudents"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="view Students"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"/>
+        <Button
+            android:id="@+id/viewTeachers"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="view Teachers"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:id="@+id/viewSubjects"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="view Subjects"
+            android:layout_marginTop="5dp"/>
+        <Button
+            android:id="@+id/viewLocations"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="view Locations"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/viewAcademics"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="view Academic Session"
+                android:layout_marginTop="5dp"/>
+            <Button
+                android:id="@+id/viewClasses"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="view Classes"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
