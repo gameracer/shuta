@@ -47,7 +47,7 @@ public class ShutaProvider extends ContentProvider {
     public static final String STUDENT_COLUMN_GENDER = "student_gender";
     public static final String STUDENT_COLUMN_DATEREGISTERED = "student_dateRegister";
     public static final String STUDENT_COLUMN_PGNAME = "student_pgName";
-    public static final String STUDENT_COLUMN_PGPHONE = "student_pgPhone";
+    public static final String STUDENT_COLUMN_PGPHONE = "student_pgPhoneNo";
     public static final String STUDENT_COLUMN_PGPOBOX = "student_pgPOBox";
     public static final String STUDENT_COLUMN_CLASS = "class_code";
     public static final String STUDENT_COLUMN_LOCATION = "location";

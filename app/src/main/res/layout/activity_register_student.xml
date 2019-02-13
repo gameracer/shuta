@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="first name:"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
             <EditText
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="middle name:"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
             <EditText
@@ -81,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="last name:"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
             <EditText
@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Date of birth:"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
             <Button
@@ -112,6 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint=" set date"
+                android:background="@color/colorAccent"
                 />
         </LinearLayout>
 
@@ -126,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Gender/sex:"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
             <RadioGroup
@@ -162,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Password:"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
             <EditText
@@ -188,7 +189,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Region:"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
             <Spinner
@@ -211,7 +212,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="District:"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
             <Spinner
@@ -232,7 +233,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Ward/street:"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
             <Spinner
@@ -269,7 +270,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Parent/Gardian name:"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
             <EditText
@@ -291,7 +292,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="phoneNo:"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
             <EditText
@@ -313,7 +314,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="address:"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
             <EditText
@@ -334,7 +335,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="save"
-                android:layout_weight="2"/>
+                android:layout_weight="2"
+                android:background="@color/colorAccent"/>
         </LinearLayout>
 
     </LinearLayout>

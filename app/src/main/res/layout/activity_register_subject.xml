@@ -19,7 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="5dp"
-            android:text="subject code:" />
+            android:text="subject code:"
+            android:textColor="@color/colorAccent"/>
 
         <EditText
             android:id="@+id/subjectCode"
@@ -43,7 +44,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="5dp"
-            android:text="subject name:" />
+            android:text="subject name:"
+            android:textColor="@color/colorAccent"/>
 
         <EditText
             android:id="@+id/subjectName"
@@ -59,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="save" />
-
+        android:text="save"
+        android:background="@color/colorAccent"/>
 
 </LinearLayout>

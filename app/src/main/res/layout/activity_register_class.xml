@@ -19,7 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="5dp"
-            android:text="class name:" />
+            android:text="class name:"
+            android:textColor="@color/colorAccent"/>
 
         <EditText
             android:id="@+id/className"
@@ -35,5 +36,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="add" />
+        android:text="add"
+        android:background="@color/colorAccent"/>
 </LinearLayout>

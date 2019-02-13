@@ -19,7 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="5dp"
-            android:text="Region:" />
+            android:text="Region:"
+            android:textColor="@color/colorAccent"/>
 
         <EditText
             android:id="@+id/region"
@@ -43,7 +44,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="5dp"
-            android:text="District:" />
+            android:text="District:"
+            android:textColor="@color/colorAccent"/>
 
         <EditText
             android:id="@+id/district"
@@ -66,7 +68,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="5dp"
-            android:text="Ward:" />
+            android:text="Ward:"
+            android:textColor="@color/colorAccent"/>
 
         <EditText
             android:id="@+id/ward"
@@ -82,7 +85,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="save" />
+        android:text="save"
+        android:background="@color/colorAccent"/>
 
 
 </LinearLayout>

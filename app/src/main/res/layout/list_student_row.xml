@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="5">
+
+    <TextView
+        android:id="@+id/rowregNoListView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="studentID"
+        android:padding="5dp"/>
+    <TextView
+        android:id="@+id/rowstudentFNameListView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="studentFName"
+        android:padding="5dp"/>
+    <TextView
+        android:id="@+id/rowstudentMNameListView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="studentMname"
+        android:padding="5dp"/>
+    <TextView
+        android:id="@+id/rowstudentLNameListView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="studentLname"
+        android:padding="5dp"/>
+    <TextView
+        android:id="@+id/rowstudentPasswordListView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="studentPassword"
+        android:padding="5dp"/>
 
 </LinearLayout>

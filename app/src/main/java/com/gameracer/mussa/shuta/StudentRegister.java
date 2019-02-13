@@ -58,14 +58,15 @@ public class StudentRegister extends AppCompatActivity {
         fname = (EditText) findViewById(R.id.studentFname);
         mname = (EditText) findViewById(R.id.studentMname);
         lname = (EditText) findViewById(R.id.studentLname);
-        password = (EditText) findViewById(R.id.studentLname);
-        studentMale=(RadioButton)findViewById(R.id.studentMale);
+        password = (EditText) findViewById(R.id.studentPassword);
+        studentMale=(RadioButton)findViewById(R.id.studentMale); 
         studentFemale=(RadioButton)findViewById(R.id.studentFemale);
         lname = (EditText) findViewById(R.id.studentLname);
         pgname = (EditText) findViewById(R.id.studentLname);
         pgPhoneNo = (EditText) findViewById(R.id.studentLname);
         pgPoBox = (EditText) findViewById(R.id.studentLname);
         lname = (EditText) findViewById(R.id.studentLname);
+        save=(Button) findViewById(R.id.saveStudent);
 
 
         Spinner spinnerRegion = (Spinner) findViewById(R.id.spinnerRegion);
@@ -181,12 +182,19 @@ public class StudentRegister extends AppCompatActivity {
             }
         });
 
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                saveAction(fname,mname,lname,password,gender1,pgname,pgPhoneNo,pgPoBox,null,null,0);
+            }
+        });
+
     }//end of init view
 
     public void saveAction(EditText fname, EditText mname, EditText lname,
                            EditText password, String gender, EditText pgname,
                            EditText pgPhoneNo, EditText pgPoBox,
-                           EditText stClass, @Nullable EditText location, int location_id) {
+                           @Nullable EditText stClass, @Nullable EditText location, int location_id) {
         String studentID,fnm, mnm,lnm,pwd, pgnm,pgPhNo,pgPBox;
         int Id;
         fnm=fname.getText().toString();

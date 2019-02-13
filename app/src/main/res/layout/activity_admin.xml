@@ -11,6 +11,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="add Academic session"
+        android:background="@color/colorAccent"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"/>
     <Button
@@ -18,13 +19,15 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="add location"
+        android:background="@color/colorAccent"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"/>
     <Button
         android:id="@+id/addClass"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="add class "
+        android:background="@color/colorAccent"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
     <Button
@@ -32,6 +35,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="add subject"
+        android:background="@color/colorAccent"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
     <Button
@@ -39,6 +43,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="add Student"
+        android:background="@color/colorAccent"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
     <Button
@@ -46,6 +51,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="add Teacher"
+        android:background="@color/colorAccent"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
 
@@ -66,13 +72,16 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="view Students"
+            android:background="@color/colorAccent"
             android:layout_weight="1"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"/>
         <Button
             android:id="@+id/viewTeachers"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="view Teachers"
+            android:background="@color/colorAccent"
             android:layout_weight="1"
             android:layout_marginTop="5dp"/>
     </LinearLayout>
@@ -88,12 +97,15 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="view Subjects"
-            android:layout_marginTop="5dp"/>
+            android:background="@color/colorAccent"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"/>
         <Button
             android:id="@+id/viewLocations"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="view Locations"
+            android:background="@color/colorAccent"
             android:layout_marginTop="5dp"/>
     </LinearLayout>
         <LinearLayout
@@ -108,12 +120,15 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="view Academic Session"
-                android:layout_marginTop="5dp"/>
+                android:background="@color/colorAccent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"/>
             <Button
                 android:id="@+id/viewClasses"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="view Classes"
+                android:background="@color/colorAccent"
                 android:layout_marginTop="5dp"/>
         </LinearLayout>
     </LinearLayout>

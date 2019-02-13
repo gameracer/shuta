@@ -1,31 +1,34 @@
 package com.gameracer.mussa.shuta;
 
+import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
+import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.gameracer.mussa.shuta.provider.DBHelper;
-//import android.database.sqlite;
+import com.gameracer.mussa.shuta.provider.ShutaProvider;
 
 public class MainActivity extends AppCompatActivity {
-//    private static final String TAG ="" ;
     public EditText username;
     public EditText password;
-    public Button login,register;
+    public Button login;
+
+    //session handler
+    public static final String MyPREFERENCES = "shutaPrefs" ;
+    public static final String RegNo = "RegNoKey";
+    public static final String Password = "PasswordKey";
+    SharedPreferences sharedpreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //       setSupportActionBar(toolbar);
-        DBHelper shuta=new DBHelper(this);
-
-        SQLiteDatabase db = shuta.getWritableDatabase();
         initView();
 
     }
@@ -53,48 +56,81 @@ public class MainActivity extends AppCompatActivity {
 //        return super.onOptionsItemSelected(item);
 //    }
 
-    public void initView(){
-        username=findViewById(R.id.username);
-        password=findViewById(R.id.password);
-        login=findViewById(R.id.login);
-//        register=findViewById(R.id.register);
+    public void initView() {
+        username = findViewById(R.id.username);
+        password = findViewById(R.id.password);
+        login = findViewById(R.id.login);
 
-        login.setOnClickListener(new View.OnClickListener(){
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginAction(username.getText().toString(),password.getText().toString());
+                loginAction(username.getText().toString(), password.getText().toString());
             }
         });
-//        register.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(MainActivity.this, register_student.class);
-//                startActivity(i);
-//            }
-//        });
-
-       
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
     }
-
 
 
     public void loginAction(String uname, String pwd) {
-
-        if(uname.equals("admin") && pwd.equals("admin")){
+        Cursor dataSudent = getAllStudent();
+        //admin
+        if (uname.equals("admin") && pwd.equals("admin")) {
             Toast.makeText(getApplicationContext(),
-                  "Redirecting...",Toast.LENGTH_SHORT).show();
-            Intent a=new Intent(MainActivity.this, Admin.class);
+                    "Redirecting...", Toast.LENGTH_SHORT).show();
+            Intent a = new Intent(MainActivity.this, Admin.class);
             startActivity(a);
 
-        }else{
+        } else if (dataSudent != null) {
+            /*
+             * Moves to the next row in the cursor. Before the first movement in the cursor, the
+             * "row pointer" is -1, and if you try to retrieve data at that position you will get an
+             * exception.
+             */
+            while (dataSudent.moveToNext()) {
+                // student
+                if (uname.equals(dataSudent.getString(0)) && pwd.equals(dataSudent.getString(1))) {
+                    //save preshared key
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                    editor.putString(RegNo, uname);
+                    editor.putString(Password, pwd);
+                    editor.commit();
 
-            Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
+                    Intent studentMainActivity=new Intent(this,StudentMainActivity.class);
+                    startActivity(studentMainActivity);
+                }
+                // Gets the value from the column.
+//                newWord = mCursor.getString(index);
+                // Insert code here to process the retrieved word.
+                // end of while loop
+            }
+//         else {
+//
+//                // Insert code here to report an error if the cursor is null or the provider threw an exception.
+//            }
         }
 
-      //  Toast.makeText(this,"master tony",Toast.LENGTH_SHORT).show();
+        //teacher
+//        else if(){
+//
+//        }
+        else {
+            Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
+        }
+
+        //  Toast.makeText(this,"master tony",Toast.LENGTH_SHORT).show();
     }
 
 
+
+    public Cursor getAllStudent(){
+        String[] projection = {ShutaProvider.STUDENT_COLUMN_ID,
+                ShutaProvider.STUDENT_COLUMN_PASSWORD,
+                ShutaProvider.STUDENT_COLUMN_MNAME,
+                ShutaProvider.STUDENT_COLUMN_LNAME};
+        Cursor mcursor=getContentResolver().query(ShutaProvider.STUDENT_URI,projection,null,null,null);
+        return mcursor;
+    }
 
 
 

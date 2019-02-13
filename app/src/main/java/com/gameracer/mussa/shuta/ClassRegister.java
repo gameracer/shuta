@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.gameracer.mussa.shuta.provider.Classs;
 import com.gameracer.mussa.shuta.provider.DBHelper;
@@ -45,9 +46,18 @@ public class ClassRegister extends AppCompatActivity {
         });
     }
     public void saveClassAction(EditText className){
-        String clsnm=className.getText().toString();
-        Classs mclass=new Classs(clsnm);
-        addClass(mclass);
+        String clsnm = className.getText().toString();
+        if(clsnm.equals("")){
+            Toast.makeText(ClassRegister.this,"class name is empty",Toast.LENGTH_LONG).show();
+        }
+
+        else {
+            Classs mclass = new Classs(clsnm);
+            addClass(mclass);
+            Toast.makeText(ClassRegister.this, "thanks the class is registered ", Toast.LENGTH_LONG).show();
+            className.setText("");
+        }
+
     }
 
     public void addClass(Classs mclass) {
