@@ -32,7 +32,7 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="first name:"
@@ -41,7 +41,7 @@
 
             <EditText
                 android:id="@+id/studentFname"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="enter first name" />
@@ -55,7 +55,7 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="middle name:"
@@ -64,7 +64,7 @@
 
             <EditText
                 android:id="@+id/studentMname"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="enter middle  name" />
@@ -77,7 +77,7 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="last name:"
@@ -86,7 +86,7 @@
 
             <EditText
                 android:id="@+id/studentLname"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="enter last  name" />
@@ -99,7 +99,7 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Date of birth:"
@@ -108,7 +108,7 @@
 
             <Button
                 android:id="@+id/dateOfBirth"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint=" set date"
@@ -123,7 +123,7 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Gender/sex:"
@@ -131,7 +131,7 @@
                 android:textStyle="bold" />
 
             <RadioGroup
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="middle  name"
@@ -159,7 +159,7 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Password:"
@@ -168,7 +168,7 @@
 
             <EditText
                 android:id="@+id/studentPassword"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="enter default password" />
@@ -275,7 +275,7 @@
 
             <EditText
                 android:id="@+id/studentPGname"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="enter parent/gardian  name" />
@@ -288,7 +288,7 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="phoneNo:"
@@ -297,7 +297,7 @@
 
             <EditText
                 android:id="@+id/studentPGphone"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="enter last  phone number" />
@@ -310,7 +310,7 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="address:"
@@ -319,7 +319,7 @@
 
             <EditText
                 android:id="@+id/studentPGaddress"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="enter address for parent/gardian" />
